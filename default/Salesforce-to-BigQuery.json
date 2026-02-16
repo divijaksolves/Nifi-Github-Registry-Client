@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1771242218842,
+    "description" : "",
+    "identifier" : "Salesforce-to-BigQuery",
+    "lastModifiedTimestamp" : 1771242218842,
+    "name" : "Salesforce to BigQuery",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
