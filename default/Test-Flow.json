@@ -41,6 +41,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7e50fa5c-a550-33d1-8c11-4cf5353111e2",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "87f8ad75-4bc9-3acd-8844-9834bd867c67",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1f45cc56-85b4-3be9-9aac-8f6fc7bfcb6a",
+        "name" : "GenerateFlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 2
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -55,8 +85,16 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "4367e68b-4469-36fd-8db1-442a2623864d",
       "position" : {
-        "x" : -230.0,
-        "y" : -20.389196395874023
+        "x" : -240.0,
+        "y" : -24.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7e50fa5c-a550-33d1-8c11-4cf5353111e2",
+      "position" : {
+        "x" : 264.0,
+        "y" : -240.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -172,6 +210,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Test-Flow",
-    "timestamp" : 1771244625956
+    "timestamp" : 1771244692434
   }
 }
