@@ -257,39 +257,6 @@
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
-      "bends" : [ {
-        "x" : -520.0,
-        "y" : -32.0
-      } ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "cda88c26-cb49-3fe1-88e7-e6d3a1b9d71d",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "a9194ff9-e277-3da0-a8cd-c38c76670223",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "87e936c8-c53c-3188-a72a-84ba56dc75e5",
-        "name" : "SplitJson",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 19
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -317,6 +284,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 11
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dbf6b95f-683a-3743-8cd7-50a4d83e0f74",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b7f18606-c09c-355d-825e-d591defb8479",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "87e936c8-c53c-3188-a72a-84ba56dc75e5",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 24
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -1285,7 +1282,15 @@
     "externalControllerServiceReferences" : { },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-    "funnels" : [ ],
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "dbf6b95f-683a-3743-8cd7-50a4d83e0f74",
+      "position" : {
+        "x" : -551.1165644171783,
+        "y" : -0.9282130609992691
+      }
+    } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
     "labels" : [ ],
@@ -2343,7 +2348,7 @@
   "parameterContexts" : {
     "Salesforce to Bigquery" : {
       "componentType" : "PARAMETER_CONTEXT",
-      "inheritedParameterContexts" : [ ],
+      "inheritedParameterContexts" : [ "Nifi Test Flow" ],
       "name" : "Salesforce to Bigquery",
       "parameters" : [ {
         "description" : "",
@@ -2421,12 +2426,31 @@
         "provided" : false,
         "sensitive" : true
       } ]
+    },
+    "Nifi Test Flow" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "",
+      "inheritedParameterContexts" : [ ],
+      "name" : "Nifi Test Flow",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "id",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "ks1292"
+      }, {
+        "description" : "",
+        "name" : "name",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "ksolves"
+      } ]
     }
   },
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Salesforce-to-BigQuery",
-    "timestamp" : 1771242220321
+    "timestamp" : 1771242877335
   }
 }
